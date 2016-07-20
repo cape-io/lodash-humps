@@ -1,6 +1,6 @@
 {
   "name": "lodash-humps",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Recursive camelCase of object keys and arrays of objects",
   "main": "lib/index.js",
   "author": "Kai Curry <kai@cape.io> (http://www.cape.io/)",
@@ -11,6 +11,7 @@
   "scripts": {
     "build": "mkdir -p lib && babel ./src -d lib",
     "prepublish": "npm run build",
+    "test-common": "tape test/common.js",
     "test": "babel-tape-runner test/**/*spec.js"
   },
   "license": "ISC",
@@ -19,6 +20,7 @@
   },
   "devDependencies": {
     "babel-cli": "^6.10.1",
+    "babel-plugin-add-module-exports": "^0.2.1",
     "babel-plugin-lodash": "^3.2.5",
     "babel-preset-es2015": "^6.9.0",
     "babel-preset-stage-1": "^6.5.0",
