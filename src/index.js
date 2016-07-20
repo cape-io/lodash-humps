@@ -1,9 +1,4 @@
-import camelCase from 'lodash/camelCase'
-import forEach from 'lodash/forEach'
-import isArray from 'lodash/isArray'
-import isObject from 'lodash/isObject'
-import isString from 'lodash/isString'
-import map from 'lodash/map'
+import { camelCase, forEach, isArray, isObject, isString, map } from 'lodash'
 
 export function getVal(val) {
   if (isObject) return humps(val) // eslint-disable-line no-use-before-define
