@@ -1,7 +1,7 @@
 import { camelCase, forEach, isArray, isObject, isString, map } from 'lodash'
 
 export function getVal(val) {
-  if (isObject) return humps(val) // eslint-disable-line no-use-before-define
+  if (isObject(val)) return humps(val) // eslint-disable-line no-use-before-define
   return val
 }
 

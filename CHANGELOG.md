@@ -1,3 +1,8 @@
+## [1.1.1]
+> 2016-07-19
+
+Do not camelCase all values, only object values!
+
 ## [1.1.0]
 > 2016-07-19
 
