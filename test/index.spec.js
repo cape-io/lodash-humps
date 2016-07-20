@@ -24,5 +24,6 @@ test('humps', t => {
     spaceKey: 'space', underscoreKey: { anotherOne: 2 },
   }
   t.deepEqual(humps(before), after, 'objects')
+  t.deepEqual(humps([ { foo_bar: 'underscore' } ]), [ { fooBar: 'underscore' } ], 'array')
   t.end()
 })
