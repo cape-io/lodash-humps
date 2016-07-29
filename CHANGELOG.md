@@ -1,3 +1,8 @@
+## [2.0.0]
+> 2016-07-28
+
+Drop support for passing a string. Use `_.camelCase()` instead.
+
 ## [1.1.1]
 > 2016-07-19
 

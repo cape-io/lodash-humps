@@ -8,6 +8,7 @@ test('humps', t => {
     TXT: 'ONE MORE THING',
     foo_bar: 'underscore',
     tests: 'ASTM D 4157-13',
+    contents: [ '100% Acrylic' ],
   }
   const after = {
     spaceKey: 'space',
@@ -15,9 +16,10 @@ test('humps', t => {
     txt: 'ONE MORE THING',
     fooBar: 'underscore',
     tests: 'ASTM D 4157-13',
+    contents: [ '100% Acrylic' ],
   }
+  t.equal(humps('some string_yo'), 'some string_yo', 'no string processing')
   t.deepEqual(humps(before), after, 'objects')
   t.deepEqual(humps([ before, before ]), [ after, after ], 'array')
-  t.equal(humps('some string_yo-dance around'), 'someStringYoDanceAround', 'strings')
   t.end()
 })

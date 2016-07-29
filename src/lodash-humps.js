@@ -1,4 +1,4 @@
-import { camelCase, forEach, isArray, isObject, isString, map } from 'lodash'
+import { camelCase, forEach, isArray, isObject, map } from 'lodash'
 
 export function getVal(val) {
   if (isObject(val)) return humps(val) // eslint-disable-line no-use-before-define
@@ -21,6 +21,5 @@ export function humpsArr(arr) {
 export default function humps(node) {
   if (isArray(node)) return humpsArr(node)
   if (isObject(node)) return humpsObj(node)
-  if (isString(node)) return camelCase(node)
   return node
 }
