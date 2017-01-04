@@ -1,7 +1,7 @@
 import test from 'tape'
 import humps from '../'
 
-test('humps', t => {
+test('humps', (t) => {
   const before = {
     'space key': 'space',
     underscore_key: { another_one: 2 },

@@ -14,12 +14,8 @@ export function humpsObj(obj) {
   return result
 }
 
-export function humpsArr(arr) {
-  return map(arr, humps) // eslint-disable-line no-use-before-define
-}
-
 export default function humps(node) {
-  if (isArray(node)) return humpsArr(node)
+  if (isArray(node)) return map(node, humps)
   if (isObject(node)) return humpsObj(node)
   return node
 }
