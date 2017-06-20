@@ -43,6 +43,6 @@ snakes(object) // { attr_one: 'foo', attr_two: 'bar', attr_three: { attr_one: 'f
 
 ## Version 3 Changes
 
-**NOTE:** Version 3.x will only work with objects created by the Object constructor. You may need to do something like `const result = humps({ ...SomeOtherClass })` to get humps to process your stuff. Functions are now kept and not converted. Some might say this is a _bug_ and others might call it a _feature_. Full version bump so you can have your pick.
+**NOTE:** Version 3.x will only work with objects created by the Object constructor. You may need to do something like `const result = humps({ ...SomeOtherClass })` to get humps to process your stuff. Functions properties are now kept and not converted to `{}`. Some might say this is a _bug_ and others might call it a _feature_. Full version bump so you can have your pick.
 
-Internally switched from using `_.isObject` to `_.isPlainObject` before converting the keys and children objects. Switched to `_.isObjectLike` within the `getVal()`.
+Internally switched from using `_.isObject` to `_.isPlainObject` before converting the keys and children objects.
