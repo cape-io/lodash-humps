@@ -12,23 +12,33 @@ $ npm i --save lodash-humps
 
 ### Converting object keys
 
-    import humps from 'humps'
-    const object = { attr_one: 'foo', attr_two: 'bar', attr_three: { attr_one: 'foo' } }
-    humps(object) // { attrOne: 'foo', attrTwo: 'bar', attrThree: { attrOne: 'foo' } }
+Defaults to remove any hyphens, underscores, whitespace characters, and uppercases the first character that follows. See `_.camelCase()` https://lodash.com/docs#camelCase.
 
-Arrays of objects are also converted
+````javascript
+import humps from 'humps'
 
-    const array = [{ attr_one: 'foo' }, { attr_one: 'bar' }]
-    humps(array) // [{ attrOne: 'foo' }, { attrOne: 'bar' }]
+const object = { attr_one: 'foo', attr_two: 'bar', attr_three: { attr_one: 'foo' } }
+humps(object) // { attrOne: 'foo', attrTwo: 'bar', attrThree: { attrOne: 'foo' } }
+````
+
+Arrays of objects are also converted:
+
+````javascript
+const array = [{ attr_one: 'foo' }, { attr_one: 'bar' }]
+humps(array) // [{ attrOne: 'foo' }, { attrOne: 'bar' }]
+````
 
 ### Custom key converter
 
-What if you want to convert it back?!? See test/createHumps.spec.js for an example. (Open an issue if you want a proper export.)
+What if you want to convert it back?!? See test/createHumps.spec.js for an example. Open an issue if you want a proper export.
 
-    import createHumps from 'humps/lib/createHumps'
-    const snakes = createHumps(_.snakeCase)
-    const object = { attrOne: 'foo', attrTwo: 'bar', attrThree: { attrOne: 'foo' } }
-    snakes(object) // { attr_one: 'foo', attr_two: 'bar', attr_three: { attr_one: 'foo' } }
+````javascript
+import createHumps from 'humps/lib/createHumps'
+
+const snakes = createHumps(_.snakeCase)
+const object = { attrOne: 'foo', attrTwo: 'bar', attrThree: { attrOne: 'foo' } }
+snakes(object) // { attr_one: 'foo', attr_two: 'bar', attr_three: { attr_one: 'foo' } }
+````
 
 ## Version 3 Changes
 
