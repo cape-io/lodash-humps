@@ -1,6 +1,6 @@
 {
   "name": "lodash-humps",
-  "version": "2.0.1",
+  "version": "3.1.0",
   "description": "Recursive camelCase of object keys and arrays of objects",
   "main": "lib/index.js",
   "author": "Kai Curry <kai@cape.io> (http://www.cape.io/)",
@@ -8,6 +8,17 @@
   "bugs": {
     "url": "https://github.com/cape-io/lodash-humps/issues"
   },
+  "keywords": [
+    "utils",
+    "camel",
+    "case",
+    "keys",
+    "underscore",
+    "converter",
+    "strings",
+    "lodash",
+    "objects"
+  ],
   "scripts": {
     "build": "mkdir -p lib && babel ./src -d lib",
     "prepublish": "npm run build",

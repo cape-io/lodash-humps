@@ -1,3 +1,4 @@
-import humps from './lodash-humps'
+import { camelCase } from 'lodash'
+import createHumps from './createHumps'
 // Only export the one default. Be friendly to CommonJS.
-export default humps
+export default createHumps(camelCase)

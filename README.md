@@ -1,6 +1,6 @@
-# lodash-humps v3.0.0
+# lodash-humps v3.1.0
 
-This is basically https://github.com/domchristie/humps but depends on lodash. I think I read "copies some utility functions from Underscore.js" and decided to write a few line module that just uses lodash. Works on deeply nested objects/arrays. I love lodash.
+Converting object keys to camelCase. Works on deeply nested objects/arrays. Handy for converting underscore keys to camelCase.
 
 ## Install
 
@@ -12,6 +12,7 @@ $ npm i --save lodash-humps
 
 ### Converting object keys
 
+    import humps from 'humps'
     const object = { attr_one: 'foo', attr_two: 'bar', attr_three: { attr_one: 'foo' } }
     humps(object) // { attrOne: 'foo', attrTwo: 'bar', attrThree: { attrOne: 'foo' } }
 
@@ -19,6 +20,15 @@ Arrays of objects are also converted
 
     const array = [{ attr_one: 'foo' }, { attr_one: 'bar' }]
     humps(array) // [{ attrOne: 'foo' }, { attrOne: 'bar' }]
+
+### Custom key converter
+
+What if you want to convert it back?!? See test/createHumps.spec.js for an example. (Open an issue if you want a proper export.)
+
+    import createHumps from 'humps/lib/createHumps'
+    const snakes = createHumps(_.snakeCase)
+    const object = { attrOne: 'foo', attrTwo: 'bar', attrThree: { attrOne: 'foo' } }
+    snakes(object) // { attr_one: 'foo', attr_two: 'bar', attr_three: { attr_one: 'foo' } }
 
 ## Version 3 Changes
 

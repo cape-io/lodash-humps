@@ -1,3 +1,8 @@
+## [3.1.0]
+> 2017-06-20
+
+Added `createHumps()` for conversion back or other custom key conversion if desired.
+
 ## [3.0.0]
 > 2017-06-20
 
