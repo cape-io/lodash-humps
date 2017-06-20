@@ -1,3 +1,10 @@
+## [3.0.0]
+> 2017-06-20
+
+**NOTE:** Will only work with objects created by the Object constructor. You will need to do something like `const result = humps({ ...SomeOtherClass })` to get it process.
+
+Switch from using `_.isObject` to `_.isPlainObject` before converting the keys and children objects. Switched to `_.isObjectLike` within the `getVal()` function. With version 2.0 function properties were converted to plain objects.
+
 ## [2.0.0]
 > 2016-07-28
 

@@ -12,10 +12,16 @@ $ npm i --save lodash-humps
 
 ### Converting object keys
 
-    const object = { attr_one: 'foo', attr_two: 'bar' }
-    humps(object) // { attrOne: 'foo', attrTwo: 'bar' }
+    const object = { attr_one: 'foo', attr_two: 'bar', attr_three: { attr_one: 'foo' } }
+    humps(object) // { attrOne: 'foo', attrTwo: 'bar', attrThree: { attrOne: 'foo' } }
 
 Arrays of objects are also converted
 
     const array = [{ attr_one: 'foo' }, { attr_one: 'bar' }]
     humps(array) // [{ attrOne: 'foo' }, { attrOne: 'bar' }]
+
+## Version 3 Changes
+
+**NOTE:** Version 3.x will only work with objects created by the Object constructor. You may need to do something like `const result = humps({ ...SomeOtherClass })` to get humps to process your stuff. Functions are now kept and not converted. Some might say this is a _bug_ and others might call it a _feature_. Full version bump so you can have your pick.
+
+Internally switched from using `_.isObject` to `_.isPlainObject` before converting the keys and children objects. Switched to `_.isObjectLike` within the `getVal()`.

@@ -1,21 +1,15 @@
-import { camelCase, forEach, isArray, isObject, map } from 'lodash'
+import { camelCase, isArray, isObjectLike, isPlainObject, map, transform, set } from 'lodash'
 
 export function getVal(val) {
-  if (isObject(val)) return humps(val) // eslint-disable-line no-use-before-define
-  return val
+  return isObjectLike(val) ? humps(val) : val // eslint-disable-line no-use-before-define
 }
 
-// keyMap and valueMap at the same time.
-export function humpsObj(obj) {
-  const result = {}
-  forEach(obj, (val, key) => {
-    result[camelCase(key)] = getVal(val)
-  })
-  return result
+export function objIteratee(result, value, key) {
+  return set(result, camelCase(key), getVal(value))
 }
 
 export default function humps(node) {
   if (isArray(node)) return map(node, humps)
-  if (isObject(node)) return humpsObj(node)
+  if (isPlainObject(node)) return transform(node, objIteratee)
   return node
 }
