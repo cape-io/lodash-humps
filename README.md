@@ -1,4 +1,4 @@
-# lodash-humps v2.0.0
+# lodash-humps v3.0.0
 
 This is basically https://github.com/domchristie/humps but depends on lodash. I think I read "copies some utility functions from Underscore.js" and decided to write a few line module that just uses lodash. Works on deeply nested objects/arrays. I love lodash.
 
