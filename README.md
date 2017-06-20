@@ -34,8 +34,9 @@ What if you want to convert it back?!? See test/createHumps.spec.js for an examp
 
 ````javascript
 import createHumps from 'humps/lib/createHumps'
+import { snakeCase } from 'lodash'
 
-const snakes = createHumps(_.snakeCase)
+const snakes = createHumps(snakeCase)
 const object = { attrOne: 'foo', attrTwo: 'bar', attrThree: { attrOne: 'foo' } }
 snakes(object) // { attr_one: 'foo', attr_two: 'bar', attr_three: { attr_one: 'foo' } }
 ````
