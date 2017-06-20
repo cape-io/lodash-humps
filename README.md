@@ -12,7 +12,7 @@ $ npm i --save lodash-humps
 
 ### Converting object keys
 
-Defaults to remove any hyphens, underscores, whitespace characters, and uppercases the first character that follows. See `_.camelCase()` https://lodash.com/docs#camelCase.
+Defaults to remove any hyphens, underscores, whitespace characters, and uppercases the first character that follows. See `_.camelCase()` https://lodash.com/docs#camelCase and https://en.wikipedia.org/wiki/CamelCase.
 
 ````javascript
 import humps from 'humps'
