@@ -1,6 +1,6 @@
 # lodash-humps v3.1.0
 
-Converting object keys to camelCase. Works on deeply nested objects/arrays. Handy for converting underscore keys to camelCase. Using lodash keeps the code small at around 15 lines.
+Converting object keys to camelCase. Works on deeply nested objects/arrays. Handy for converting underscore keys to camelCase. Using lodash keeps the code small and light at around 10 lines.
 
 ## Install
 
@@ -12,7 +12,7 @@ $ npm i --save lodash-humps
 
 ### Converting object keys
 
-Defaults to remove any hyphens, underscores, whitespace characters, and uppercases the first character that follows. See `_.camelCase()` https://lodash.com/docs#camelCase and https://en.wikipedia.org/wiki/CamelCase.
+Remove any hyphens, underscores, whitespace characters, and uppercases the first character that follows. Returns a new object. See `_.camelCase()` https://lodash.com/docs#camelCase and https://en.wikipedia.org/wiki/CamelCase.
 
 ````javascript
 import humps from 'humps'
