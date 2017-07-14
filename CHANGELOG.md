@@ -1,3 +1,8 @@
+## [3.1.2]
+> 2017-07-13
+
+Documentation fixes. Thanks Tim!
+
 ## [3.1.0]
 > 2017-06-20
 

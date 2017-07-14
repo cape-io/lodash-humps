@@ -15,7 +15,7 @@ $ npm i --save lodash-humps
 Remove any hyphens, underscores, whitespace characters, and uppercases the first character that follows. Returns a new object. See `_.camelCase()` https://lodash.com/docs#camelCase and https://en.wikipedia.org/wiki/CamelCase.
 
 ````javascript
-import humps from 'humps'
+import humps from 'lodash-humps'
 
 const object = { attr_one: 'foo', attr_two: 'bar', attr_three: { attr_one: 'foo' } }
 humps(object) // { attrOne: 'foo', attrTwo: 'bar', attrThree: { attrOne: 'foo' } }
@@ -43,7 +43,7 @@ snakes(object) // { attr_one: 'foo', attr_two: 'bar', attr_three: { attr_one: 'f
 
 ## Version 3 Changes
 
-**NOTE:** Version 3.x will only work with objects created by the Object constructor. You may need to do something like `const result = humps({ ...SomeOtherClass })` to get humps to process your stuff. Functions properties are now kept and not converted to `{}`. Some might say this is a _bug_ and others might call it a _feature_. Full version bump so you can have your pick.
+**NOTE:** Version 3.x will only work with objects created by the Object constructor. You may need to do something like `const result = humps({ ...SomeOtherClass })` to get humps to process your stuff. Function properties are now kept and not converted to `{}`. Some might say this is a _bug_ and others might call it a _feature_. Full version bump so you can have your pick.
 
 Internally switched from using `_.isObject` to `_.isPlainObject` before converting the keys and children objects.
 
