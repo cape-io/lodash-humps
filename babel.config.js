@@ -4,7 +4,7 @@ module.exports = function config(api) {
   const presets = [
     ['@babel/preset-env'],
   ]
-  const plugins = ['lodash']
+  const plugins = ['add-module-exports', 'lodash']
 
   return {
     presets,
