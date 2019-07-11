@@ -1,22 +1,15 @@
-{
-  "extends": [
-    "airbnb-base",
-    "plugin:import/errors",
-    "plugin:import/warnings"
-  ],
-  "env": {
-    "browser": false,
-  },
-  "rules": {
-    "comma-dangle": [2, "always-multiline"],
-    "id-length": [2, {
-      "min": 3,
-      "max": 30,
-      "properties": "never",
-      "exceptions": ["t", "_"]
-    }],
-    "import/no-named-as-default": 0,
-    "no-trailing-spaces": 2,
-    "semi": [ 2, "never" ]
-  }
-}
+---
+# yarn add -D eslint eslint-plugin-import eslint-plugin-lodash-fp eslint-config-airbnb-base
+env:
+  browser: false
+extends:
+  - eslint:recommended
+  - airbnb-base
+  - plugin:import/errors
+  - plugin:import/warnings
+  - plugin:lodash-fp/recommended
+plugins:
+  - import
+  - lodash-fp
+rules:
+  semi: [2, never]
