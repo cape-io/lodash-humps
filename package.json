@@ -1,6 +1,6 @@
 {
   "name": "lodash-humps",
-  "version": "3.1.5",
+  "version": "3.1.6",
   "description": "Recursive camelCase of object keys and arrays of objects",
   "main": "lib/index.js",
   "author": "Kai Curry <kai@cape.io> (http://www.cape.io/)",
