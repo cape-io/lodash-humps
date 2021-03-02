@@ -1,4 +1,4 @@
-# lodash-humps v3.1.2
+# lodash-humps v3.1.6
 
 Converting object keys to camelCase. Works on deeply nested objects/arrays. Handy for converting underscore keys to camelCase. Using lodash keeps the code small and light at around 10 lines.
 
